@@ -29,8 +29,4 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 ## Credits
 
 - [Clément Barbaza](https://github.com/cba85)
-- [All Contributors](https://github.com/appstraction/saas-metrics/contributors)
 
-## License
-
-GPL. Please see [License File](LICENSE) for more information.
