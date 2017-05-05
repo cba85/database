@@ -18,15 +18,12 @@ $ composer require cba85/database
     $sql = new DB('host', 'db', 'user', 'pass');
 ```
 
+You'll find more examples in the `example` folder.
+
 ## Testing
 
 Tests unavailable.
 
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
 ## Credits
 
 - [Clément Barbaza](https://github.com/cba85)
-

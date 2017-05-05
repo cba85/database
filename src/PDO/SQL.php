@@ -42,7 +42,7 @@ class SQL extends PDO
         $this->connect();
     }
 
-    public function executeQuery($query, $data = array())
+    public function executeQuery($query, $data = [])
     {
         $stmt = parent::prepare($query);
 
@@ -56,24 +56,36 @@ class SQL extends PDO
         }
     }
 
-    public function insert($query, $data = array())
+    public function insert($query, $data = [])
     {
         return $this->executeQuery($query, $data) ? ( parent::lastInsertId() ? parent::lastInsertId() : true ) : false;
     }
 
-    public function select($query, $data = array())
+    public function select($query, $data = [])
     {
         return $this->executeQuery($query, $data);
     }
 
-    public function update($query, $data = array())
+    public function update($query, $data = [])
     {
         return $this->executeQuery($query, $data);
     }
 
-    public function delete($query, $data = array())
+    public function delete($query, $data = [])
     {
         return $this->executeQuery($query, $data);
+    }
+
+    public function first($query, $data = [])
+    {
+        $result = $this->select($query, $data);
+        return $result->fetchObject();
+    }
+
+    public function get($query, $data = [], $type = PDO::FETCH_OBJ)
+    {
+        $results = $this->select($query, $data);
+        return $results->fetchAll($type);
     }
 
 }
